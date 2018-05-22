@@ -36,7 +36,6 @@ anti_aliasing_size = 1
 _sections_unfolded = [ "Border", "Border Width", "Corner Radius" ]
 
 [node name="MainView" type="Control" index="0"]
-
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 1.0
@@ -52,7 +51,6 @@ script = ExtResource( 2 )
 _sections_unfolded = [ "Theme" ]
 
 [node name="Background" type="Panel" parent="." index="0"]
-
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 1.0
@@ -66,7 +64,6 @@ size_flags_vertical = 1
 _sections_unfolded = [ "Material", "Visibility", "custom_styles" ]
 
 [node name="View" type="VSplitContainer" parent="." index="1"]
-
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 1.0
@@ -83,7 +80,6 @@ dragger_visibility = 2
 _sections_unfolded = [ "custom_constants" ]
 
 [node name="MenuBar" type="HBoxContainer" parent="View" index="0"]
-
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -101,7 +97,6 @@ alignment = 0
 _sections_unfolded = [ "Margin", "Rect", "Size Flags" ]
 
 [node name="FileMenu" type="MenuButton" parent="View/MenuBar" index="0"]
-
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -122,11 +117,10 @@ group = null
 text = "File"
 flat = true
 align = 1
-items = [ "Load mesh...", null, false, false, false, -1, 0, null, "", false, "Quit", null, false, false, false, -1, 0, null, "", false ]
+items = [ "Load mesh...", null, 0, false, false, -1, 0, null, "", false, "Quit", null, 0, false, false, -1, 0, null, "", false ]
 _sections_unfolded = [ "Size Flags", "Theme" ]
 
 [node name="OptionsMenu" type="MenuButton" parent="View/MenuBar" index="1"]
-
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -152,7 +146,6 @@ items = [  ]
 _sections_unfolded = [ "Mouse" ]
 
 [node name="MainFrame" type="HSplitContainer" parent="View" index="1"]
-
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -172,7 +165,6 @@ dragger_visibility = 0
 _sections_unfolded = [ "Anchor", "Hint", "Margin", "Mouse", "Rect", "Size Flags", "custom_constants" ]
 
 [node name="LeftPanel" type="HSplitContainer" parent="View/MainFrame" index="0"]
-
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -191,7 +183,6 @@ dragger_visibility = 0
 _sections_unfolded = [ "Mouse", "Size Flags", "Theme" ]
 
 [node name="PaintViewport" type="Control" parent="View/MainFrame/LeftPanel" index="0"]
-
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -208,7 +199,6 @@ size_flags_vertical = 3
 _sections_unfolded = [ "Rect", "Size Flags" ]
 
 [node name="ViewportContainer" type="ViewportContainer" parent="View/MainFrame/LeftPanel/PaintViewport" index="0"]
-
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 1.0
@@ -225,7 +215,6 @@ stretch_shrink = 1
 _sections_unfolded = [ "Mouse", "Pause", "Rect", "Size Flags" ]
 
 [node name="Viewport" type="Viewport" parent="View/MainFrame/LeftPanel/PaintViewport/ViewportContainer" index="0"]
-
 arvr = false
 size = Vector2( 914, 930 )
 own_world = false
@@ -234,6 +223,7 @@ transparent_bg = false
 msaa = 0
 hdr = true
 disable_3d = false
+keep_3d_linear = false
 usage = 2
 debug_draw = 0
 render_target_v_flip = false
@@ -254,7 +244,6 @@ _sections_unfolded = [ "GUI" ]
 [node name="main" parent="View/MainFrame/LeftPanel/PaintViewport/ViewportContainer/Viewport" index="0" instance=ExtResource( 3 )]
 
 [node name="ViewportUI" type="Control" parent="View/MainFrame/LeftPanel/PaintViewport" index="1"]
-
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 1.0
@@ -268,7 +257,6 @@ size_flags_vertical = 1
 _sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Material", "Mouse", "Rect", "Size Flags", "Theme", "Visibility", "custom_styles" ]
 
 [node name="Cursor" type="Panel" parent="View/MainFrame/LeftPanel/PaintViewport/ViewportUI" index="0"]
-
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -286,7 +274,6 @@ custom_styles/panel = SubResource( 1 )
 _sections_unfolded = [ "Anchor", "Material", "Mouse", "Rect", "Size Flags", "Visibility", "custom_styles" ]
 
 [node name="ColorPicker" type="ColorPicker" parent="View/MainFrame/LeftPanel/PaintViewport/ViewportUI" index="1"]
-
 visible = false
 anchor_left = 0.0
 anchor_top = 0.0
@@ -309,7 +296,6 @@ raw_mode = false
 _sections_unfolded = [ "Anchor", "Focus", "Margin", "Mouse", "Rect", "custom_constants" ]
 
 [node name="BottomPanel" type="VSplitContainer" parent="View/MainFrame/LeftPanel" index="1"]
-
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -330,7 +316,6 @@ dragger_visibility = 0
 _sections_unfolded = [ "Rect", "Size Flags" ]
 
 [node name="HBoxContainer" type="VBoxContainer" parent="View/MainFrame/LeftPanel/BottomPanel" index="0"]
-
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -346,7 +331,6 @@ size_flags_vertical = 1
 alignment = 0
 
 [node name="albedo" type="VBoxContainer" parent="View/MainFrame/LeftPanel/BottomPanel/HBoxContainer" index="0"]
-
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -363,7 +347,6 @@ alignment = 0
 _sections_unfolded = [ "Size Flags" ]
 
 [node name="label" type="Label" parent="View/MainFrame/LeftPanel/BottomPanel/HBoxContainer/albedo" index="0"]
-
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -388,7 +371,6 @@ max_lines_visible = -1
 _sections_unfolded = [ "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
 
 [node name="rect" type="TextureRect" parent="View/MainFrame/LeftPanel/BottomPanel/HBoxContainer/albedo" index="1"]
-
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -407,7 +389,6 @@ stretch_mode = 6
 _sections_unfolded = [ "Anchor", "Margin", "Rect", "Size Flags" ]
 
 [node name="roughness" type="VBoxContainer" parent="View/MainFrame/LeftPanel/BottomPanel/HBoxContainer" index="1"]
-
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -425,7 +406,6 @@ alignment = 0
 _sections_unfolded = [ "Size Flags" ]
 
 [node name="label" type="Label" parent="View/MainFrame/LeftPanel/BottomPanel/HBoxContainer/roughness" index="0"]
-
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -450,7 +430,6 @@ max_lines_visible = -1
 _sections_unfolded = [ "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
 
 [node name="rect" type="TextureRect" parent="View/MainFrame/LeftPanel/BottomPanel/HBoxContainer/roughness" index="1"]
-
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -469,7 +448,6 @@ stretch_mode = 6
 _sections_unfolded = [ "Anchor", "Margin", "Rect", "Size Flags" ]
 
 [node name="metalness" type="VBoxContainer" parent="View/MainFrame/LeftPanel/BottomPanel/HBoxContainer" index="2"]
-
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -487,7 +465,6 @@ alignment = 0
 _sections_unfolded = [ "Size Flags" ]
 
 [node name="label" type="Label" parent="View/MainFrame/LeftPanel/BottomPanel/HBoxContainer/metalness" index="0"]
-
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -512,7 +489,6 @@ max_lines_visible = -1
 _sections_unfolded = [ "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
 
 [node name="rect" type="TextureRect" parent="View/MainFrame/LeftPanel/BottomPanel/HBoxContainer/metalness" index="1"]
-
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -531,7 +507,6 @@ stretch_mode = 6
 _sections_unfolded = [ "Anchor", "Margin", "Rect", "Size Flags" ]
 
 [node name="emission" type="VBoxContainer" parent="View/MainFrame/LeftPanel/BottomPanel/HBoxContainer" index="3"]
-
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -549,7 +524,6 @@ alignment = 0
 _sections_unfolded = [ "Size Flags" ]
 
 [node name="label" type="Label" parent="View/MainFrame/LeftPanel/BottomPanel/HBoxContainer/emission" index="0"]
-
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -574,7 +548,6 @@ max_lines_visible = -1
 _sections_unfolded = [ "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
 
 [node name="rect" type="TextureRect" parent="View/MainFrame/LeftPanel/BottomPanel/HBoxContainer/emission" index="1"]
-
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -593,7 +566,6 @@ stretch_mode = 6
 _sections_unfolded = [ "Anchor", "Margin", "Rect", "Size Flags" ]
 
 [node name="RightPanel" type="VSplitContainer" parent="View/MainFrame" index="1"]
-
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -614,7 +586,6 @@ dragger_visibility = 0
 _sections_unfolded = [ "Anchor", "Margin", "Rect", "Size Flags" ]
 
 [node name="Brush" type="VBoxContainer" parent="View/MainFrame/RightPanel" index="0"]
-
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -632,7 +603,6 @@ alignment = 0
 _sections_unfolded = [ "Rect" ]
 
 [node name="Preview" type="VBoxContainer" parent="View/MainFrame/RightPanel/Brush" index="0"]
-
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -650,7 +620,6 @@ alignment = 0
 _sections_unfolded = [ "Rect" ]
 
 [node name="Label" type="Label" parent="View/MainFrame/RightPanel/Brush/Preview" index="0"]
-
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -669,7 +638,6 @@ lines_skipped = 0
 max_lines_visible = -1
 
 [node name="rect" type="TextureRect" parent="View/MainFrame/RightPanel/Brush/Preview" index="1"]
-
 material = ExtResource( 4 )
 anchor_left = 0.0
 anchor_top = 0.0
@@ -693,7 +661,6 @@ __meta__ = {
 }
 
 [node name="softness_slider" type="HSlider" parent="View/MainFrame/RightPanel/Brush/Preview" index="2"]
-
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -715,13 +682,14 @@ page = 0.0
 value = 0.0
 exp_edit = false
 rounded = false
+allow_greater = false
+allow_lesser = false
 editable = true
 tick_count = 4
 ticks_on_borders = true
 focus_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="View/MainFrame/RightPanel/Brush" index="1"]
-
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -739,7 +707,6 @@ alignment = 0
 _sections_unfolded = [ "Size Flags" ]
 
 [node name="Label" type="Label" parent="View/MainFrame/RightPanel/Brush/VBoxContainer" index="0"]
-
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -758,7 +725,6 @@ lines_skipped = 0
 max_lines_visible = -1
 
 [node name="ColorPickerButton" type="ColorPickerButton" parent="View/MainFrame/RightPanel/Brush/VBoxContainer" index="1"]
-
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -783,7 +749,6 @@ color = Color( 1, 1, 1, 1 )
 edit_alpha = true
 
 [node name="Layers" type="Panel" parent="View/MainFrame/RightPanel" index="1"]
-
 editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
@@ -802,7 +767,6 @@ size_flags_vertical = 1
 _sections_unfolded = [ "Rect", "Size Flags" ]
 
 [node name="Label" type="Label" parent="View/MainFrame/RightPanel/Layers" index="0"]
-
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -821,9 +785,5 @@ lines_skipped = 0
 max_lines_visible = -1
 
 [connection signal="gui_input" from="View/MainFrame/LeftPanel/PaintViewport/ViewportUI" to="View/MainFrame/LeftPanel/PaintViewport/ViewportContainer/Viewport/main" method="_on_ViewportUI_gui_input"]
-
 [connection signal="value_changed" from="View/MainFrame/RightPanel/Brush/Preview/softness_slider" to="." method="_on_softness_slider_value_changed"]
-
 [connection signal="color_changed" from="View/MainFrame/RightPanel/Brush/VBoxContainer/ColorPickerButton" to="." method="_on_ColorPickerButton_color_changed"]
-
-

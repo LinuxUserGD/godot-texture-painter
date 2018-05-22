@@ -8,6 +8,14 @@ func _process(delta):
 	if Input.is_key_pressed(KEY_F12):
 		PainterState.store_textures_on_disk("res://export/")
 	
+	if Input.is_key_pressed(KEY_F11):
+		var textures = PainterState.load_textures_from_disk("res://export/")
+		var mat = $spatial/suz.get_surface_material(0)
+		mat.albedo_texture = textures[0]
+		mat.roughness_texture = textures[1]
+		mat.metallic_texture = textures[2]
+		mat.emission_texture = textures[3]
+
 	state_machine.update(delta)
 
 func _on_ViewportUI_gui_input(ev):
